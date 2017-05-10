@@ -167,4 +167,9 @@ class Job
 
         return $this->getJenkins()->getBuild($this->getName(), $this->job->lastBuild->number);
     }
+     
+    public function isInQueue()
+    {
+        return (bool)$this->job->inQueue;
+    }
 }
